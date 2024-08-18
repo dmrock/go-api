@@ -11,7 +11,7 @@ import (
 )
 
 func GetCoinBalance(w http.ResponseWriter, r *http.Request) {
-	var params = api.CoinBalanceRequest{}
+	var params = api.CoinBalanceParams{}
 	var decoder *schema.Decoder = schema.NewDecoder()
 	var err error
 
