@@ -4,8 +4,8 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/dmrock/go-api/api"
-	"github.com/dmrock/go-api/internal/tools"
+	"go-api/api"
+	"go-api/internal/tools"
 	log "github.com/sirupsen/logrus"
 )
 
