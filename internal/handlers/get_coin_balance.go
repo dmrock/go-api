@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/dmrock/go-api/cmd/api"
+	"github.com/dmrock/go-api/api"
 	"github.com/dmrock/go-api/internal/tools"
 	log "github.com/sirupsen/logrus"
 	"github.com/gorilla/schema"
@@ -33,6 +33,7 @@ func GetCoinBalance(w http.ResponseWriter, r *http.Request) {
 	var tokenDetails *tools.CoinDetails
 	tokenDetails = (*database).GetUserCoins(params.Username)
 	if tokenDetails == nil {
+		log.Error(err)
 		api.InternalErrorHandler(w)
 		return
 	}
